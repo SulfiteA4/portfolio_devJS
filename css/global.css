@@ -1,18 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     font-size: 16px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif; /*padrão por enquanto*/
+    font-family: 'Roboto', Arial, Helvetica, sans-serif; /*padrão por enquanto*/
 }
-
-a {
-    text-decoration: none;
-}
-
-
-  
   /*  
     padrão 16 => calculo 16 * (porcentagem) => 0,9375 = 15px
     rem utiliza o font size da aplicação 
   */
+
+
+
+/* configurando variaveis de cor */
+:root{
+  --white:     #FFFFFF;
+  --black:     #000000;
+
+  --purple-400: #AB04D9;
+  --purple-600: #8D04B3;
+  --purple-700: #8303A6;
+
+  --grey-300: #F2F2F2;
+
+  --green-100: #0CF2B1;
+
+  --blue-800: #191950;
+}
+
+
+/* configura;'oes para reponsividade */
+@media (max-width: 720px) {
+  html {
+      font-size: 87.5%;
+  }
+}
+
+@media (max-width: 385px) {
+  html {
+    font-size: 67%;
+  }
+}
+
+body, input, textarea, select, button {
+  font: 400 1rem Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* estilizações padrões a todos os arquivos do projeto */
+/* cabeçalho */
+.Header{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background-color: var(--purple-700);
+}
+
+.Header > a {
+  margin: 0 2vw;
+  padding: 3.5vh 0;
+  display: block;
+  font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: var(--white);
+
+  transition: .3s;
+}
+
+.Header > a:first-child {
+  font-size: 1.3rem;
+  margin-right: 8vw;
+  font-weight: 700;
+}
+
+.Header > a:hover {
+  color: var(--green-100);
+}
+
+/* corpo da página */
+
+.Container {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+/* aside */
+.Sidebar{
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 22%;
+  height: 100vh;
+  padding: 1.5rem .7rem;
+  top: 0;
+  background-color: var(--purple-600);
+  color: var(--white);
+  line-height: 1.7rem;
+}
+
+.Sidebar > .Avatar {
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto 1rem auto;
+  border-radius: 50%;
+  background-color: var(--purple-400);
+  z-index: 1;
+}
+
+.Sidebar > .Avatar > img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.Autor-info > *{
+  margin: 1rem 0;
+}
+
+.Autor-info > h3 {
+  font-size: 1.3rem;
+}
+
+.Autor-info:nth-child(2) {
+  line-height: 1rem;
+}
+
+
+
+/* icones sidebar */
+.Autor-contatos > ul > a > li > i{
+  font-size: 1.2rem;
+  margin-right: .5rem;
+}
+.Autor-contatos > ul > a > li{
+  transition: .5s;
+  margin: .5rem 0;
+}
+.Autor-contatos > ul > a > li:hover {
+  color: #0CF2B1;
+}
+
+section{
+  width: 78%;
+  padding: 3rem 4rem;
+  background-color: var(--grey-300);
+}
+
+
+/* footer */
+
+.ContainerF{
+  padding: 3rem 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: var(--blue-800);
+
+}
+
+.Container-item{
+  width: 25%;
+  margin-bottom: 2rem;
+  padding: 0 1.35rem;
+  color: var(--white);
+}
+
+.Container-item > h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.Container-item > ul {
+    line-height: 1.34;
+    width: 100%;
+}
+
+.Container-item  > ul > a > li {
+  padding: .25rem 0;
+  font-size: .8rem;
+  transition: .3s;
+}
+
+.Container-icones{
+  display: flex;
+  flex-direction: row;
+  margin-top: .8rem;
+  gap: .8rem;
+}
+
+.Container-icones > a > i{
+  font-size: 1.2rem;
+  transition: .3s;
+}
+
+.Container-item  > ul > a > li:hover,
+.Container-icones > a > i:hover{
+  filter: brightness(.8);
+}

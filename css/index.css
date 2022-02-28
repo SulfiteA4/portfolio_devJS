@@ -1,0 +1,14 @@
+#About > *{
+  font-family: 'Poppins', sans-serif;
+}
+
+#About > h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: .3rem;
+
+}
+
+#About > p {
+  font-size: 1.3rem;
+}

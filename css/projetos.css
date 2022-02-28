@@ -1,0 +1,7 @@
+#Main-Content > * {
+    font-family: 'Poppins', sans-serif;
+}
+
+#Main-content > div + div {
+    margin-bottom: .4rem;
+}
